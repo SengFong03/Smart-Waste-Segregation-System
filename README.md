@@ -31,47 +31,51 @@ Smart-Waste-Segregation-System/
 ├── game_database.py        # Database handler for the Eco-Game module
 ├── requirements.txt        # Python dependencies
 ├── models/
-│   └── best.pt          # Custom trained YOLOv8 model weights
+│   └── best.pt             # Custom trained YOLOv8 model weights
 ├── images/                 # Demo images for testing and screenshots
 ├── notebooks/              # Jupyter notebooks for analysis (EDA, Cross-Validation)
 └── training/               # Python scripts used for GCP training
+```
 
-📸 Screenshots
-🔹 Mode 1: Real-Time Webcam Detection
+## 📸 Screenshots
+
+### 🔹 Mode 1: Real-Time Webcam Detection
 Live inference using the device's camera to detect waste items on the fly.
+![Webcam Detection](images/webcam_demo.png)
 
-🔹 Mode 2: Static Image Detection
+### 🔹 Mode 2: Static Image Detection
 Upload existing images for classification and analysis.
+![Static Image Detection](images/app_demo.png)
 
-🚀 Installation & Usage
-Clone the repository:
+## 🚀 Installation & Usage
 
-Bash
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/SengFong03/Smart-Waste-Segregation-System.git
+   cd Smart-Waste-Segregation-System
+   ```
 
-git clone [https://github.com/SengFong03/Smart-Waste-Segregation-System.git](https://github.com/SengFong03/Smart-Waste-Segregation-System.git)
-cd Smart-Waste-Segregation-System
-Install dependencies:
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Bash
+3. **Run the application:**
+   ```bash
+   streamlit run app.py
+   ```
 
-pip install -r requirements.txt
-Run the application:
+> **💡 Tip:** You can use the sample images provided in the `images/` folder to test the classification immediately!
 
-Bash
+## 🧠 Methodology (CRISP-DM)
+The project development followed the **CRISP-DM** (Cross-Industry Standard Process for Data Mining) methodology:
 
-streamlit run app.py
-💡 Tip: You can use the sample images provided in the images/ folder to test the classification immediately!
+* **Data Understanding**: Conducted Exploratory Data Analysis (EDA) to ensure class balance (see `notebooks/01_Exploratory_Data_Analysis.ipynb`).
+* **Modeling**: Trained the YOLOv8 model on **Google Cloud Platform (GCP)** using NVIDIA GPUs for optimal performance (scripts in `training/`).
+* **Evaluation**: Performed rigorous 5-Fold Cross-Validation to ensure model robustness (see `notebooks/03_Cross_Validation.ipynb`).
 
-🧠 Methodology (CRISP-DM)
-The project development followed the CRISP-DM (Cross-Industry Standard Process for Data Mining) methodology:
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Data Understanding: Conducted Exploratory Data Analysis (EDA) to ensure class balance (see notebooks/01_Exploratory_Data_Analysis.ipynb).
-
-Modeling: Trained the YOLOv8 model on Google Cloud Platform (GCP) using NVIDIA GPUs for optimal performance (scripts in training/).
-
-Evaluation: Performed rigorous 5-Fold Cross-Validation to ensure model robustness (see notebooks/03_Cross_Validation.ipynb).
-
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
-
-Developed by Cheng Seng Fong
+---
+*Developed by Cheng Seng Fong*

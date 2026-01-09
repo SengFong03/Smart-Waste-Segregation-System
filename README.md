@@ -45,7 +45,7 @@ Live inference using the device's camera to detect waste items on the fly.
 
 ### 🔹 Mode 2: Static Image Detection
 Upload existing images for classification and analysis.
-![Static Image Detection](images/app_demo.png)
+![Static Image Detection](images/app_demo.jpg)
 
 ## 🚀 Installation & Usage
 

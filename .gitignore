@@ -1,0 +1,28 @@
+# Python 缓存 (必须过滤)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境 (防止你把几千个库文件传上去)
+venv/
+env/
+.venv/
+
+# 环境变量 & 敏感信息 (防止 API Key 泄露)
+.env
+gcp_credentials.json
+
+# IDE 配置文件 (VS Code / PyCharm 的个人配置)
+.vscode/
+.idea/
+
+# 操作系统垃圾
+.DS_Store
+Thumbs.db
+
+# 数据库 (通常不传数据，但如果你想保留演示用的记录，可以把下面这两行删掉/注释掉)
+waste_detection.db
+waste_game.db
+
+# 如果你的 best.pt 模型超过 100MB，把下面这行取消注释
+# *.pt
